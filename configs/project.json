@@ -1,0 +1,46 @@
+{
+  "slug": "knowledge-base-grounded-chat",
+  "title": "Knowledge Base Grounded Chat",
+  "project_type": "rag",
+  "domain": "Enterprise AI",
+  "summary": "Build a grounded chat layer on top of curated content with simple retrieval and answer generation.",
+  "tags": [
+    "chat",
+    "grounded",
+    "knowledge"
+  ],
+  "accent": "#3d5a80",
+  "dashboard_metrics": [
+    {
+      "label": "Grounded Recall",
+      "value": "79%",
+      "delta": "+4.6%"
+    },
+    {
+      "label": "Citation Coverage",
+      "value": "91%",
+      "delta": "+3.1%"
+    },
+    {
+      "label": "Latency",
+      "value": "141ms",
+      "delta": "-18ms"
+    }
+  ],
+  "sample_features": {
+    "query": "Summarize the highest priority risk and recommended next step.",
+    "audience": "ops"
+  },
+  "sample_metrics": {
+    "acquisition": 29.7,
+    "activation": 32.5,
+    "retention": 46.4,
+    "revenue": 70.9
+  },
+  "knowledge_base": [
+    "Knowledge Base Grounded Chat is positioned as a Enterprise AI starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Build a grounded chat layer on top of curated content with simple retrieval and answer generation.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on chat, grounded, knowledge."
+  ]
+}
