@@ -9,7 +9,8 @@
     "grounded",
     "knowledge"
   ],
-  "accent": "#3d5a80",
+  "accent": "#c8912c",
+  "secondary_accent": "#4c2ca9",
   "dashboard_metrics": [
     {
       "label": "Grounded Recall",
@@ -42,5 +43,52 @@
     "The primary value proposition is: Build a grounded chat layer on top of curated content with simple retrieval and answer generation.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on chat, grounded, knowledge."
+  ],
+  "app_archetype": "navigator",
+  "ui_profile": {
+    "layout": "board",
+    "surface": "aurora",
+    "font_stack": "\"Space Grotesk\", \"Segoe UI\", sans-serif",
+    "radius": 29,
+    "shadow": 69,
+    "eyebrow_style": "soft",
+    "module_columns": 2,
+    "hero_align": "split",
+    "headline_mode": "normal"
+  },
+  "app_modules": [
+    {
+      "label": "Query 01",
+      "title": "Grounded Question",
+      "description": "Ask a domain question and retrieve the most relevant context from the local knowledge base.",
+      "endpoint": "/query",
+      "input_mode": "text",
+      "cta": "Search Context",
+      "prefill": "What is the top priority recommendation for Knowledge Base Grounded Chat?",
+      "hint": "Grounded answer and supporting contexts will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Query 02",
+      "title": "Retrieval Quality Review",
+      "description": "Compare retrieval-side metrics against a baseline before changing prompt or chunking strategy.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Review Quality",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 29.7,\n    \"activation\": 32.5,\n    \"retention\": 46.4,\n    \"revenue\": 70.9\n  },\n  \"baseline\": {\n    \"acquisition\": 27.32,\n    \"activation\": 29.9,\n    \"retention\": 42.69,\n    \"revenue\": 65.23\n  }\n}",
+      "hint": "Quality delta summary will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Query 03",
+      "title": "Response Playbook",
+      "description": "Generate a recommended follow-up workflow grounded in the project context.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Build Response",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Knowledge Base Grounded Chat.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"ops\"\n  },\n  \"metrics\": {\n    \"acquisition\": 29.7,\n    \"activation\": 32.5,\n    \"retention\": 46.4,\n    \"revenue\": 70.9\n  }\n}",
+      "hint": "Recommended workflow steps will appear here.",
+      "span": "normal"
+    }
   ]
 }
